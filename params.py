@@ -8,7 +8,8 @@ parameters = {
     'ymin' : '20.501959',               # The following define the BBox for the map to render, its supposedly based on EPSG:4326 but I'm not sure thats accurate   
     'ymax' : '20.913021',
     'xmin' : '-157.155304',
-    'xmax' : '-156.297684'
+    'xmax' : '-156.297684',
+    'basepath' : '/home/devenv/HI_Wind_Maps_Output'
     }
 
 #########################################################################################
