@@ -47,12 +47,11 @@ while hours_requested > 0 :
 
     if not os.path.exists(path):
         os.mkdir(path)
+        
     print('Saving to: ' + outfile)
 
     wget.download(url,outfile)
-    #print('wget --directory-prefix=' + path + ' -O ' + filename + ' ' + url + ', verbose = False')
-
     hours_requested = hours_requested - 1
-    #time.sleep(2)
+    
     
 
