@@ -1,5 +1,5 @@
 # Hawaii_Wind_Maps
-This is a script that utilizes https://www.pacioos.hawaii.edu/voyager request screen shot API to download images for forecasted wind conditions
+This is a script that utilizes https://www.pacioos.hawaii.edu/voyager request screenshot API to download images for forecasted wind conditions
 
 ## Instructions
 1. adjust params in params.py
