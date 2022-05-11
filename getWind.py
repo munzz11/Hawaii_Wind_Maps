@@ -4,8 +4,8 @@ import time
 import math
 import os
 
-def roundup(x):                             # For some reason the api requires a requested timestamp ending with 00
-    return int((x / 100.0)) * 100
+os.environ['TZ'] = 'US/Hawaii'      #Set timezone to HI
+time.tzset()
 
 params_file = 'parameters.pickled'
 parameters = pickle.load(open(params_file, 'rb')) 
@@ -20,7 +20,7 @@ xmax = parameters['xmax']
 
 if start_time == '0':
     utc_timestamp = int(time.time()//3600*3600)  
-    request_timestamp = roundup(utc_timestamp)
+    request_timestamp = utc_timestamp
 hours_requested = int(num_days) * 24
 url = ''    
 while hours_requested > 0 :
@@ -47,7 +47,7 @@ while hours_requested > 0 :
 
     if not os.path.exists(path):
         os.mkdir(path)
-        
+
     print('Saving to: ' + outfile)
 
     wget.download(url,outfile)
